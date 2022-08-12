@@ -15,21 +15,20 @@ Verifique que en la consola sigan apereciendo los mensajes de log
 
 const boton = document.querySelector("button");
 
-boton.addEventListener("click", () => {
+boton.onclick= () => {
     console.log("Respuesta evento click");
     boton.className = "btnClick";
-})
+}
 
-
-boton.addEventListener("mouseover", () => {
+boton.onmouseover= () => {
     console.log("Respuesta evento mouseover");
     boton.className = "btnOver";
-})
+}
 
-boton.addEventListener("mouseout", () => {
+boton.onmouseout= () => {
     console.log("Respuesta evento mouseout");
     boton.className = "btnOut";
-})
+}
 
 
 /* 2 - Enunciado
@@ -38,9 +37,25 @@ Cree un evento que capture cuando cambia la caja de seleccion
 Utilice el ejemplo de clase de modo "white y black" para guiarse
 en como capturar este evento y además como capturar el valor
 actual seleccionado en la caja de seleccion.
-
 */
+const select = document.querySelector('select');
 
+console.log("Evento de onclick con on-event");
+ 
+select.onchange = () => {
+    let eleccion = select.value;
+
+    if (eleccion ==='Efectivo') {
+        console.log("Efectivo")
+
+    } else if(eleccion ==='Transferencia'){
+        console.log ("Transferencia")
+
+        } else {
+            console.log("Tarjeta");
+        }   
+    }
+              
 /* 3 - Enunciado
 
 Cree un evento que capture cuando haya finalizado de ingresas
@@ -50,3 +65,15 @@ PISTA: Debe utilizar el mismo tipo de evento que en el ejercicio
 anterior.
 
 */
+
+console.log("Eventos de teclado");
+
+const articulo = document.querySelector('article');
+const texto = document.querySelector('input');
+texto.onchange = () => {
+    alert("El texto es " + texto.value)
+    console.log(texto.value)
+}
+
+
+   
