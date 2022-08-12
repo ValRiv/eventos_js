@@ -20,6 +20,7 @@ boton.addEventListener("click", () => {
     boton.className = "btnClick";
 })
 
+
 boton.addEventListener("mouseover", () => {
     console.log("Respuesta evento mouseover");
     boton.className = "btnOver";
